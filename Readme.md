@@ -39,3 +39,16 @@ No specific build process is required to compile SELib. You can compile/include 
         printf("SEAnim loaded successfully! It has %u frames.", characterIdleAnimation.header.frameCount);
     }
 ```
+
+### Load a SEModel
+
+```cpp
+    SEModel_File_t mdl;
+    FILE* f;
+    f = fopen("wpn_usp.semodel", "rb");
+    int r = LoadSEModel(&mdl, f);
+    if (r == 0)
+    {
+        printf("SEModel loaded successfully! It has %u bones.", mdl.header.boneCount);
+    }
+```
