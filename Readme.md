@@ -44,8 +44,8 @@ No specific build process is required to compile SELib. You can compile/include 
 
 ```cpp
     SEModel_File_t mdl;
-	   FILE* f;
-	   f = fopen("wpn_usp.semodel", "rb");
+    FILE* f;
+    f = fopen("wpn_usp.semodel", "rb");
     int r = LoadSEModel(&mdl, f);
     if (r == 0)
     {
